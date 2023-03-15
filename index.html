@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Form</title>
+
+    <style>
+        .form-control {
+            margin-bottom: 0.5rem;
+
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .form-control [type="submit"] {
+            background-color: rgba(255,200,10,1);
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 3px;
+            padding: 0.3rem 0.7rem;
+            cursor: pointer;
+        }
+
+        #card-number,
+        #ccv {
+            font-size: 16px;
+        }
+
+        form {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2em;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.3);
+            background: rgba(128,128,128,0.3);
+
+        }
+
+    </style>
+
+    <script defer src="main.js" type="module"></script>
+</head>
+<body>
+
+    <form action="" name="checkout-form">
+        
+        <div class="form-control">
+            <label for="visa"><input type="radio" name="card-type" id="visa" value="visa" required>Visa</label>
+            <label for="mastercard"><input type="radio" name="card-type" id="mastercard" value="mastercard" required>Master Card</label>
+            <label for="amex"><input type="radio" name="card-type" id="amex" value="amex" required>American Express</label>
+            <label for="other"><input type="radio" name="card-type" id="other" value="other" required>Other</label>
+        </div>
+
+        <div class="form-control">
+            <input type="text" name="card-number" id="card-number" placeholder="Card Number" required size="19">
+            <input type="text" name="ccv" id="ccv" placeholder="CCV" size="3" required>
+        </div>
+
+        <div class="form-control">
+            <label>Expires
+                <select name="expiry-month" id="expiry-month">
+                    <option value="">Month</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select name="expiry-year" id="expiry-year">
+                    <option value="">Year</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <input type="submit" value="Place Order">
+        </div>
+    </form>
+    
+</body>
+</html>
