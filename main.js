@@ -5,7 +5,7 @@
 
 // Formats spacing in the CC Number field depending on Card Option and current length
 function formatCCNumSpacing(cardText, cardNumberField, ccAmexOpt) {
-    cardText = cardText.replace(/\s/g, ""); // Condense CC number/remove white space from String
+    cardText = cardText.replace(/\s/g, "");
 
     let maxLength = ccAmexOpt.checked ? 15 : 16;
     let format = ccAmexOpt.checked ? /^(\d{4})(\d{6})(\d{5})$/ : /^(\d{4})(\d{4})(\d{4})(\d{4})$/;
